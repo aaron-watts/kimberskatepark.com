@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const getEvents = async () => {
+            const res = await fetch(
+                'https://script.google.com/macros/s/AKfycbwy-Jfw-II_FcG0bhNqKm8KtP-e48g5_CFSBv-nOBbvUVSFftRKrfgceIqYTRnj5W9v/exec',
+                {
+                    redirect: 'follow'
+                }
+            );
+
+            const data = await res.json();
+
+            console.log(data);
+        }
+
+        getEvents();
+    </script>
+</body>
+</html>
