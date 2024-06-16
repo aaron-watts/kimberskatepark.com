@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Kimber Skatepark Webpage, find out about events and opening hours">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <title>Document</title>
+    <link rel="stylesheet" href="/assets/styles/style.css">
 </head>
+
 <body>
-    <script>
-        const getEvents = async () => {
-            const res = await fetch(
-                'https://script.google.com/macros/s/AKfycbwy-Jfw-II_FcG0bhNqKm8KtP-e48g5_CFSBv-nOBbvUVSFftRKrfgceIqYTRnj5W9v/exec',
-                {
-                    redirect: 'follow'
-                }
-            );
+    <h1>Kimber Skatepark</h1>
 
-            const data = await res.json();
+    <main>
+        <div>
+            <p>A Wandsworth Borough Council Youth Centre</p>
+            <p>For ages 8-19 (up to 25 with SEND)</p>
 
-            console.log(data);
-        }
+            <h2>Open Times</h2>
+            <ul>
+                <li>Mon-Fri (Term Time) 3-6pm</li>
+                <li>Weekends & School Holidays 12-6pm</li>
+            </ul>
+            Check <a href="#term-dates">term dates</a> for more info
+        </div>
 
-        getEvents();
-    </script>
+        <div>
+            <h2 id="events">Events</h2>
+            <div id="events--list"></div>
+        </div>
+
+        <div>
+            <h2 id="term-dates">Term Dates</h2>
+            <div id="term-dates--list"></div>
+        </div>
+    </main>
+
+    <script src="/assets/script/app.js"></script>
 </body>
+
 </html>
