@@ -20,6 +20,8 @@ body {
     color: #222;
     letter-spacing: .1em;
     line-height: 2.4em;
+    padding: 0;
+    margin: 0;
 }
 
 a {
@@ -71,12 +73,23 @@ h1, h2 {
     line-height: 2.6em;
 }
 
-h1 {
-    text-align: center;
-}
 #info {
-    text-align: center;
+    flex-basis: 100vw;
 }
-#info ul li {
-    list-style: none;
+#term-dates, #events {
+    flex-basis: 50vw;
+    flex-grow: 1;
+    min-width: 40vw;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.entry {
+    padding: .5em 1em;
+    margin: .2em;
 }

@@ -60,7 +60,8 @@ const formatDate = (start, end) => {
 const buildEvent = event => {
     const { start, end, title, description } = event;
 
-    const eventItem = document.createElement('li');
+    const eventItem = document.createElement('div');
+    eventItem.classList.add('entry');
     const titleItem = document.createElement('h4');
     titleItem.innerText = title;
 
