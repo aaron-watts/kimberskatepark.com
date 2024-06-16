@@ -19,4 +19,64 @@ body {
     background: #fff;
     color: #222;
     letter-spacing: .1em;
+    line-height: 2.4em;
+}
+
+a {
+    color: #7746d3;
+}
+a:visited {
+    color: #b12cb1;
+}
+a:hover {
+    color: #4b0ac4;
+}
+a:visited:hover {
+    color: #920fa3;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+header img {
+    height: 2em;
+}
+
+header img[alt="facebook"] {
+    filter:
+        invert(31%)
+        sepia(94%)
+        saturate(3780%)
+        hue-rotate(212deg)
+        brightness(99%)
+        contrast(108%);
+}
+
+header img[alt="youtube"] {
+    filter: 
+        brightness(0)
+        saturate(100%)
+        invert(11%)
+        sepia(94%)
+        saturate(7267%)
+        hue-rotate(10deg)
+        brightness(103%)
+        contrast(115%);
+}
+
+h1, h2 {
+    line-height: 2.6em;
+}
+
+h1 {
+    text-align: center;
+}
+#info {
+    text-align: center;
+}
+#info ul li {
+    list-style: none;
 }
