@@ -132,6 +132,7 @@ main {
 }
 main > div {
     align-self: start;
+    margin-block: 2em;
 }
 
 .entry h3{
