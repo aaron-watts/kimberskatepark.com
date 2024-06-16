@@ -81,6 +81,7 @@ const buildEvent = event => {
 const populateLists = async () => {
     const eventList = document.querySelector('#events--list');
     const termDatesList = document.querySelector('#term-dates--list');
+    const loaderWidgets = document.querySelectorAll('.loader');
 
     try {
         const data = await getEvents();
@@ -108,7 +109,7 @@ const populateLists = async () => {
         termDatesList.innerHTML = termDateFrame;
     }
     
-    
+    loaderWidgets.forEach(i => i.classList.add('hidden'))
 };
 
-// document.addEventListener('DOMContentLoaded', populateLists)
+document.addEventListener('DOMContentLoaded', populateLists)
