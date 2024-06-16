@@ -88,6 +88,13 @@ main {
     align-items: center;
     justify-content: space-evenly;
 }
+main > div {
+    align-self: start;
+}
+
+.entry h3{
+    font-size: 1em;
+}
 
 .entry {
     padding: .5em 1em;

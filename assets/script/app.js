@@ -107,4 +107,4 @@ const populateLists = async () => {
     
 };
 
-document.addEventListener('DOMContentLoaded', populateLists)
+// document.addEventListener('DOMContentLoaded', populateLists)
