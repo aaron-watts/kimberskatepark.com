@@ -24,6 +24,48 @@ body {
     margin: 0;
 }
 
+footer {
+    font-family: monospace;
+    font-size: 1.4em;
+    letter-spacing: .18em;
+    text-align: center;
+    padding-block: 2em;
+}
+footer a {
+    text-decoration: none;
+}
+footer a,
+footer a:visited {
+    color: #c0bfbc;
+}
+footer a:hover,
+footer a:hover:visited {
+    color: #9a9996;
+}
+footer img {
+    filter: 
+        brightness(0)
+        saturate(100%)
+        invert(87%)
+        sepia(0%)
+        saturate(2493%)
+        hue-rotate(223deg)
+        brightness(93%)
+        contrast(79%);
+    transform: translate(.3em, .2em);
+}
+footer a:hover img {
+    filter: 
+        brightness(0)
+        saturate(100%)
+        invert(69%)
+        sepia(8%)
+        saturate(91%)
+        hue-rotate(7deg)
+        brightness(87%)
+        contrast(90%);
+}
+
 a {
     color: #7746d3;
 }
