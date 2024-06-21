@@ -119,10 +119,13 @@ h1, h2 {
     flex-basis: 100vw;
 }
 #term-dates, #events {
-    flex-basis: 50vw;
+    flex-basis: 40vw;
     flex-grow: 1;
-    min-width: 40vw;
+    flex-shrink: 1;
+    min-width: 340px;
+    margin-inline: 2vw;
 }
+
 main {
     display: flex;
     flex-wrap: wrap;
@@ -141,7 +144,10 @@ main > div {
 
 .entry {
     padding: .5em 1em;
-    margin: .2em;
+    margin: 2em .5em;
+    box-shadow:
+        #3c40434d 0px 1px 2px 0px,
+        #3c404326 0px 1px 3px 1px;
 }
 
 .hidden {
