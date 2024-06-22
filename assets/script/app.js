@@ -6,7 +6,7 @@ const getEvents = async () => {
         }
     );
 
-    const data = await res.json();
+    const { data } = await res.json();
 
     return data;
 }
@@ -85,7 +85,7 @@ const populateLists = async () => {
 
     try {
         const data = await getEvents();
-        const { events, holidayHours } = data.data;
+        const { events, holidayHours } = data;
 
         if (events.length) {
             events.forEach(event => {
