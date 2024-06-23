@@ -1,12 +1,7 @@
 const getEvents = async () => {
-    const res = await fetch(
-        'https://script.google.com/macros/s/AKfycbwy-Jfw-II_FcG0bhNqKm8KtP-e48g5_CFSBv-nOBbvUVSFftRKrfgceIqYTRnj5W9v/exec',
-        {
-            redirect: 'follow'
-        }
-    );
+    const res = await fetch('/.netlify/functions/api');
 
-    const { data } = await res.json();
+    const data = await res.json();
 
     return data;
 }
