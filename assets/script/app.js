@@ -20,7 +20,9 @@ const formatDate = (start, end) => {
     }
 
     const isOneDay = (start, end) => {
-        if (end.getDate() - start.getDate() <= 1) return true;
+        const diffTime = Math.abs(start - end);
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+        if (diffDays <= 1) return true;
         return false;
     }
 
