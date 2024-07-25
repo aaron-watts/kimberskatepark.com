@@ -64,7 +64,7 @@ const buildEvent = event => {
     dateElement.innerText = formatDate(startDate, endDate);
 
     const descriptionItem = document.createElement('p');
-    descriptionItem.innerText = description;
+    descriptionItem.innerHTML = description;
 
     eventItem.appendChild(dateElement);
     eventItem.appendChild(titleItem);
