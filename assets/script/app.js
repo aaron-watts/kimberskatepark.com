@@ -45,6 +45,7 @@ const formatDate = (start, end) => {
     dateString += `${start.toDateString()}`;
 
     if (!isOneDay(start, end)) {
+        end.setDate(end.getDate() - 1);
         dateString += ` - ${end.toDateString()}`;
     }
 
