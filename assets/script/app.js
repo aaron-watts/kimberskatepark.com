@@ -77,34 +77,32 @@ const buildEvent = event => {
 };
 
 const populateLists = async () => {
+    const scheduleList = document.querySelector('#schedule--list');
     const eventList = document.querySelector('#events--list');
     const termDatesList = document.querySelector('#term-dates--list');
     const loaderWidgets = document.querySelectorAll('.loader');
 
     try {
         const data = await getEvents();
-        const { events, holidayHours } = data;
+        const schedule = [...data.holidayHours, ...data.events];
+        schedule.sort((a, b) => new Date(a.start) - new Date(b.start));
+        console.log(schedule);
 
-        if (events.length) {
-            events.forEach(event => {
-                eventList.appendChild(buildEvent(event));
+        if (schedule.length) {
+            schedule.forEach(event => {
+                scheduleList.appendChild(buildEvent(event));
             });
         } else {
-            eventList.innerText = 'No events information available'
-        };
-        
-        if (holidayHours.length) {
-            holidayHours.forEach(event => {
-                termDatesList.appendChild(buildEvent(event));
-            });
-        } else {
-            termDatesList.innerText = 'No holiday information available';
+            scheduleList.innerText = 'No events information available'
         };
     } catch (e) {
         const eventFrame = `<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FLondon&bgcolor=%23ffffff&showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&hl=en_GB&src=NjdhM2RhYmRiNjkxMjNjNzg2MzkyMWYwMTYwYjE1MjdhZWFmOGI0OWMwZDEyOWI1N2ZmMTM4OTMxYTdjNTU5MUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23795548" style="border:solid 1px #777" width="90%" height="400" frameborder="0" scrolling="no"></iframe>`;
         const termDateFrame = `<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FLondon&bgcolor=%23ffffff&showTitle=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=MONTH&hl=en_GB&src=N2FwZGFzcTJ1ODJlZmNoa2pmdHRxbG82Y2tAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23AD1457" style="border:solid 1px #777" width="90%" height="400" frameborder="0" scrolling="no"></iframe>`;
         eventList.innerHTML = eventFrame;
         termDatesList.innerHTML = termDateFrame;
+        document.querySelector('#schedule').classList.toggle('hidden');
+        document.querySelector('#events').classList.toggle('hidden');
+        document.querySelector('#term-dates').classList.toggle('hidden');
     }
     
     loaderWidgets.forEach(i => i.classList.add('hidden'))
