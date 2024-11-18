@@ -143,11 +143,16 @@ main > div {
 }
 
 .entry {
-    padding: .5em 1em;
+    padding: .5em 1.5em;
     margin: 2em .5em;
     box-shadow:
         #3c40434d 0px 1px 2px 0px,
         #3c404326 0px 1px 3px 1px;
+}
+@media screen and (min-width: 600px) {
+    .entry {
+        max-width: 50vw;
+    }
 }
 
 .hidden {
