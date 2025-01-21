@@ -36,9 +36,9 @@ const formatDate = (start, end) => {
         const endMM = end.getMinutes();
 
         dateString += `${startHH}:${
-            startMM.toString.length < 2 ? startMM + '0' : startMM
+            startMM.toString().length < 2 ? startMM + '0' : startMM
         } - ${endHH}:${
-            endMM.toString.length < 2 ? endMM + '0' : endMM
+            endMM.toString().length < 2 ? endMM + '0' : endMM
         }, `;
     }
 
@@ -86,7 +86,6 @@ const populateLists = async () => {
         const data = await getEvents();
         const schedule = [...data.holidayHours, ...data.events];
         schedule.sort((a, b) => new Date(a.start) - new Date(b.start));
-        console.log(schedule);
 
         if (schedule.length) {
             schedule.forEach(event => {
