@@ -36,9 +36,9 @@ const formatDate = (start, end) => {
         const endMM = end.getMinutes();
 
         dateString += `${startHH}:${
-            startMM.toString().length < 2 ? startMM + '0' : startMM
+            startMM.toString().length < 2 ? '0' + startMM : startMM
         } - ${endHH}:${
-            endMM.toString().length < 2 ? endMM + '0' : endMM
+            endMM.toString().length < 2 ? '0' + endMM : endMM
         }, `;
     }
 
