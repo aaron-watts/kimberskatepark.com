@@ -68,7 +68,7 @@ const buildEvent = event => {
 
     const descriptionItem = document.createElement('p');
     descriptionItem.innerHTML = description;
-    const anchors = descriptionItem.querySelectorAll('a');
+    const anchors = descriptionItem.querySelectorAll('a:not([target="_blank"])');
     if (anchors.length) anchors.forEach(a => a.target = '_blank');
 
     eventItem.appendChild(dateElement);
