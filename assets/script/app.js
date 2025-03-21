@@ -52,6 +52,12 @@ const formatDate = (start, end) => {
     return dateString;
 };
 
+const fixAnchors = elem => {
+    const anchors = elem.querySelectorAll('a');
+    if (anchors.length) anchors.forEach(a => a.target = '_blank');
+    return elem;
+};
+
 const buildEvent = event => {
     const { start, end, title, description } = event;
 
@@ -68,6 +74,7 @@ const buildEvent = event => {
 
     const descriptionItem = document.createElement('p');
     descriptionItem.innerHTML = description;
+    fixAnchors(descriptionItem);
 
     eventItem.appendChild(dateElement);
     eventItem.appendChild(titleItem);
