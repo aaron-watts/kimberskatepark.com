@@ -2,78 +2,90 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The Kimber Skatepark Webpage, find out about events and opening hours">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <title>Kimber Skatepark</title>
-    <link rel="preload" href="/assets/fonts/OpenDyslexic3-Bold.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/assets/fonts/OpenDyslexic3-Regular.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="/assets/styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Kimber Skatepark Webpage, find out about events and opening hours">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>Kimber Skatepark</title>
+  <link rel="preload" href="/assets/fonts/OpenDyslexic3-Bold.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/OpenDyslexic3-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/assets/styles/style.css">
 </head>
 
 <body>
-    <header>
-        <div>
-            <a target="_blank" href="https://facebook.com/kimberskatepark">
-                <img src="/assets/images/facebook.svg" alt="facebook">
-            </a>
-        </div>
-        <div>
-            <a target="_blank" href="https://instagram.com/kimberskatepark">
-                <img src="/assets/images/instagram.svg" alt="instagram">
-            </a>
-        </div>
-        <div>
-            <a target="_blank" href="https://x.com/kimberskatepark">
-                <img src="/assets/images/twitter-x.svg" alt="twitter-x">
-            </a>
-        </div>
-        <div>
-            <a target="_blank" href="https://youtube.com/@kimberskateparkwandsworth774">
-                <img src="/assets/images/youtube.svg" alt="youtube">
-            </a>
-        </div>
-    </header>
+  <header>
+    <nav aria-label="Social Media">
+      <ul>
+        <li>
+          <a href="https://facebook.com/kimberskatepark"
+            aria-label="Facebook"><svg width="30" height="30">
+            <use href="/assets/svg/svg-map.svg#facebook"/>
+          </svg></a>
+        </li>
+        <li>
+          <a href="https://instagram.com/kimberskatepark"
+            aria-label="Instagram"><svg width="30" height="30">
+            <use href="/assets/svg/svg-map.svg#instagram"/>
+          </svg></a>
+        </li>
+        <li>
+          <a href="https://x.com/kimberskatepark" aria-label="X or Twitter"><svg width="30" height="30">
+            <use href="/assets/svg/svg-map.svg#twitter"/>
+          </svg></a>
+        </li>
+        <li>
+          <a href="https://youtube.com/@kimberskateparkwandsworth774"
+            aria-label="Youtube"><svg width="30" height="30">
+            <use href="/assets/svg/svg-map.svg#youtube"/>
+          </svg></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-    
+  <main>
+      <div id="info">
+          <h1>Kimber Skatepark</h1>
+          <p>A Wandsworth Borough Council Youth Centre</p>
+          <p>For ages 8-19 (up to 25 with SEND)</p>
+          <p>Kimber Road, Wandsworth, SW18 4NY</p>
 
-    <main>
-        <div id="info">
-            <h1>Kimber Skatepark</h1>
-            <p>A Wandsworth Borough Council Youth Centre</p>
-            <p>For ages 8-19 (up to 25 with SEND)</p>
-            <p>Kimber Road, Wandsworth, SW18 4NY</p>
+          <h2>Open Times</h2>
+          <p>Mon-Fri (Term Time) 3-6pm</p>
+          <p>Weekends & School Holidays 12-6pm</p>
+          <p>For term dates and closures check the schedule below</p>
+      </div>
 
-            <h2>Open Times</h2>
-            <p>Mon-Fri (Term Time) 3-6pm</p>
-            <p>Weekends & School Holidays 12-6pm</p>
-            <p>For term dates and closures check the schedule below</p>
-        </div>
+      <div id="schedule">
+          <h2>Schedule</h2>
+          <div id="schedule--list">
+              <span class="loader"></span>
+          </div>
+      </div>
 
-        <div id="schedule">
-            <h2>Schedule</h2>
-            <div id="schedule--list">
-                <span class="loader"></span>
-            </div>
-        </div>
+      <div id="events" class="hidden">
+          <h2>Events</h2>
+          <div id="events--list">
+          </div>
+      </div>
 
-        <div id="events" class="hidden">
-            <h2>Events</h2>
-            <div id="events--list">
-            </div>
-        </div>
+      <div id="term-dates" class="hidden">
+          <h2>Term Dates</h2>
+          <div id="term-dates--list">
+          </div>
+      </div>
+  </main>
 
-        <div id="term-dates" class="hidden">
-            <h2>Term Dates</h2>
-            <div id="term-dates--list">
-            </div>
-        </div>
-    </main>
+  <footer>
+      <a href="https://aaronwatts.dev">
+          &copy; aaronwatts.dev
+      </a>
+  </footer>
 
+<<<<<<< HEAD
     <footer>
         <a target="_blank" 
             href="https://aaronwatts.dev">
@@ -82,6 +94,9 @@
     </footer>
 
     <script src="/assets/script/app.js"></script>
+=======
+  <script src="/assets/script/app.js"></script>
+>>>>>>> 2463bfc (switch to svg map)
 </body>
 
 </html>

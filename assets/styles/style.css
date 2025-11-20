@@ -10,6 +10,11 @@
     font-weight: bold;
 }
 
+:root {
+    --color: #222;
+    --bg-color: #fff;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -22,6 +27,30 @@ body {
     line-height: 2.4em;
     padding: 0;
     margin: 0;
+}
+
+nav[aria-label="Social Media"] {
+    width: 100%;
+    
+    & ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        padding: 2em;
+    }
+
+    & a[aria-label="Facebook"] {
+        fill: #1877f2;
+    }
+    & a[aria-label="Instagram"] {
+        fill: url('/assets/svg/svg-map.svg#rg');
+    }
+    & a[aria-label="X or Twitter"] {
+        fill: var(--color);
+    }
+    & a[aria-label="Youtube"] {
+        fill: #ff0000;
+    }
 }
 
 footer {
@@ -77,38 +106,6 @@ a:hover {
 }
 a:visited:hover {
     color: #920fa3;
-}
-
-header {
-    display: flex;
-    justify-content: space-around;
-    padding: 2em;
-}
-
-header img {
-    height: 2em;
-}
-
-header img[alt="facebook"] {
-    filter:
-        invert(31%)
-        sepia(94%)
-        saturate(3780%)
-        hue-rotate(212deg)
-        brightness(99%)
-        contrast(108%);
-}
-
-header img[alt="youtube"] {
-    filter: 
-        brightness(0)
-        saturate(100%)
-        invert(11%)
-        sepia(94%)
-        saturate(7267%)
-        hue-rotate(10deg)
-        brightness(103%)
-        contrast(115%);
 }
 
 h1, h2 {
