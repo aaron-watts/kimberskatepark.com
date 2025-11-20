@@ -1,4 +1,4 @@
-export default async (req, context) => {
+export default async function (req, context) {
     const api = Netlify.env.get('APPS_SCRIPT');
     
     const res = await fetch(api, {
