@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Kimber Skatepark Webpage, find out about events and opening hours">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>Kimber Skatepark</title>
+  <link rel="preload" href="/assets/fonts/OpenDyslexic3-Bold.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/OpenDyslexic3-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/assets/styles/simple.css">
+  <link rel="stylesheet" href="/assets/styles/new.style.css">
+</head>
+
+<body>
+  <header>
+    <nav aria-label="Social Media">
+      <ul>
+        <li>
+          <a href="https://facebook.com/kimberskatepark"
+            aria-label="Facebook"><svg width="30" height="30">
+            <use href="/assets/svg/svg-map.svg#facebook"/>
+          </svg></a>
+        </li>
+        <li>
+          <a href="https://instagram.com/kimberskatepark"
+            aria-label="Instagram"><svg width="30" height="30">
+            <use href="/assets/svg/svg-map.svg#instagram"/>
+          </svg></a>
+        </li>
+        <li>
+          <a href="https://x.com/kimberskatepark" aria-label="X or Twitter"><svg width="30" height="30">
+            <use href="/assets/svg/svg-map.svg#twitter"/>
+          </svg></a>
+        </li>
+        <li>
+          <a href="https://youtube.com/@kimberskateparkwandsworth774"
+            aria-label="Youtube"><svg width="30" height="30">
+            <use href="/assets/svg/svg-map.svg#youtube"/>
+          </svg></a>
+        </li>
+      </ul>
+    </nav>
+    <h1>Kimber Skatepark</h1>
+    <p>A Wandsworth Borough Youth Centre</p>
+    <p>For ages 8-19 (up to 25 with SEND)</p>
+    <address>Kimber Road, Wandsworth, SW18 4NY</address>
+  </header>
+
+  <main>
+    <section>
+      <h2>Open Times</h2>
+      <p>Mon-Fri (Term Time) 3-6pm</p>
+      <p>Weekends & School Holidays 12-6pm</p>
+      <p>For term dates and closures check the schedule below</p>
+    </section>
+
+    <button onclick="document.getElementById('disclaimer').showModal()">Open Dialog</button>
+    <dialog id="disclaimer">
+      <h2>Failed to get Schedule</h2>
+      <p>Use Google Calendar Fallback?</p>
+      <p><small>This action will connect directly to Google
+      where Google's GDPR guidelines apply.</small></p>
+      <form>
+        <button value="cancel" formmethod="dialog">Cancel</button>
+        <button id="confirmBtn" value="default">Confirm</button>
+      </form> 
+    </dialog>
+    <noscript>
+      Enable JavaScript to fetch events and schedule.
+    </noscript>
+  </main>
+
+  <footer>
+      <a href="https://aaronwatts.dev">
+          &copy; aaronwatts.dev
+      </a>
+  </footer>
+
+  <script src="/assets/script/new.app.js"></script>
+</body>
+
+</html>
