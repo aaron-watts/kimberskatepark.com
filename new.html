@@ -59,17 +59,19 @@
       <p>For term dates and closures check the schedule below</p>
     </section>
 
-    <button onclick="document.getElementById('disclaimer').showModal()">Open Dialog</button>
-    <dialog id="disclaimer">
+    <dialog id="disclaimer" closedby="none">
       <h2>Failed to get Schedule</h2>
       <p>Use Google Calendar Fallback?</p>
       <p><small>This action will connect directly to Google
-      where Google's GDPR guidelines apply.</small></p>
+        where <a href="https://policies.google.com/privacy"
+          target="_blank">Google's GDPR guidelines</a>
+        apply.</small></p>
       <form>
-        <button value="cancel" formmethod="dialog">Cancel</button>
-        <button id="confirmBtn" value="default">Confirm</button>
+        <button value="cancel" formmethod="dialog">No thanks</button>
+        <button id="confirmBtn" value="default">Okay</button>
       </form> 
     </dialog>
+    
     <noscript>
       Enable JavaScript to fetch events and schedule.
     </noscript>
@@ -77,7 +79,7 @@
 
   <footer>
       <a href="https://aaronwatts.dev">
-          &copy; aaronwatts.dev
+          &copy;aaronwatts.dev
       </a>
   </footer>
 
