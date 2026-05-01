@@ -10,16 +10,18 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <title>Kimber Skatepark</title>
-  <link rel="preload" href="/assets/fonts/OpenDyslexic3-Bold.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/AtkinsonHyperlegibleNextVF-Variable.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/assets/fonts/OpenDyslexic3-Regular.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="/assets/styles/simple.css">
-  <link rel="stylesheet" href="/assets/styles/new.style.css">
+  <link rel="preload" href="/assets/fonts/OpenDyslexic3-Bold.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/assets/styles/style.css">
+  <link rel="stylesheet" href="/assets/styles/odfont.css">
 </head>
 
 <body>
+  <a href="#content">Skip to Content</a>
   <header>
     <nav aria-label="Social Media">
-      <ul>
+      <ul class="reset-list">
         <li>
           <a href="https://facebook.com/kimberskatepark"
             aria-label="Facebook"><svg width="30" height="30">
@@ -45,45 +47,56 @@
         </li>
       </ul>
     </nav>
+
     <h1>Kimber Skatepark</h1>
-    <p>A Wandsworth Borough Youth Centre</p>
-    <p>For ages 8-19 (up to 25 with SEND)</p>
-    <address>Kimber Road, Wandsworth, SW18 4NY</address>
   </header>
 
-  <main>
-    <section>
-      <h2>Open Times</h2>
+  <main id="content">
+    <p id="font" class="notice"><small>Is this page hard to read?<br/>
+      <a href="/">Switch to
+      a version that uses the Atkinson Hyperlegible font</a></small></p>
+
+    <section aria-labelledby="info">
+      <p>A Wandsworth Borough Council Youth Centre*</p>
+      <p>For ages 8-19 (up to 25 with SEND)</p>
+      <p><address>Kimber Road, Wandsworth, SW18 4NY</address></p>
+      <p id="disclaimer" class="notice"><small>*This page is maintained on a voluntary
+      basis and is in no way affiliated to Wandsworth Borough Council.<br/>
+      <a href="">Read our full disclaimer.</a></small></p>
+    </section>
+
+    
+    <section aria-labelledby="open-times">
+      <h2 id="open-times">Open Times</h2>
       <p>Mon-Fri (Term Time) 3-6pm</p>
       <p>Weekends & School Holidays 12-6pm</p>
       <p>For term dates and closures check the schedule below</p>
     </section>
 
-    <dialog id="disclaimer" closedby="none">
-      <h2>Failed to get Schedule</h2>
-      <p>Use Google Calendar Fallback?</p>
-      <p><small>This action will connect directly to Google
-        where <a href="https://policies.google.com/privacy"
-          target="_blank">Google's GDPR guidelines</a>
-        apply.</small></p>
-      <form>
-        <button value="cancel" formmethod="dialog">No thanks</button>
-        <button id="confirmBtn" value="default">Okay</button>
-      </form> 
-    </dialog>
-    
-    <noscript>
-      Enable JavaScript to fetch events and schedule.
-    </noscript>
+    <section aria-labelledby="schedule" aria-live="polite">
+      <h2 id="schedule">Schedule</h2>
+      <noscript>
+        <p>Please enable JavaScript to fetch scheduled events.</p>
+      </noscript>
+      <p id="user-msg" class="noscript">Data loading, please wait...</p>
+      <ul id="schedule-list" class="noscript reset-list"></ul>
+    </section>
   </main>
 
   <footer>
+    <nav aria-label="Legal Documents">
+      <ul class="reset-list">
+        <li><a href="">Accessibility Statement</a></li>
+        <li><a href="">Disclaimer</a></li>
+      </ul>
+      
+    </nav>
       <a href="https://aaronwatts.dev">
-          &copy;aaronwatts.dev
+          &copy; aaronwatts.dev
       </a>
   </footer>
 
-  <script src="/assets/script/new.app.js"></script>
+  <script src="/assets/script/app.js"></script>
 </body>
 
 </html>
