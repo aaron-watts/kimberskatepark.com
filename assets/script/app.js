@@ -2,7 +2,8 @@
 
 class App {
     constructor(data) {
-        this.scheduleEl = document.querySelector('#schedule-list');
+//        this.scheduleEl = document.querySelector('#schedule-list');
+        this.schedulePar = document.querySelector('#schedule-list--container');
         this.userMsg = document.querySelector('#user-msg');
         this.data = data;
         if (this.data) {
@@ -17,12 +18,15 @@ class App {
     }
 
     populateSchedule() {
+        const scheduleEl = document.createElement('ul');
         for (let event of this.schedule) {
             const liEl = document.createElement('li');
             liEl.appendChild(this.buildArticle(event));
-            this.scheduleEl.appendChild(liEl);
+            scheduleEl.appendChild(liEl);
         }
 
+        scheduleEl.classList.add('reset-list');
+        this.schedulePar.appendChild(scheduleEl);
         this.userMsg.classList.add('hidden');
     }
 

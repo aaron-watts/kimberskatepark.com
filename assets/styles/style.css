@@ -38,7 +38,8 @@
     }
 }
 
-a[href="#content"] {
+a[href="#content"],
+.screen-reader-text {
     position: absolute;
     left: -9999px;
 }
@@ -66,8 +67,12 @@ body {
 }
 
 main {
-    max-width: 60vw;
     margin-inline: auto;
+
+    & > *:not(h1) {
+        max-width: 60vw;
+        margin-inline: auto;
+    }
 }
 
 section {
@@ -78,11 +83,6 @@ p#font {
     font-family: 'OpenDyslexic';
 }
 
-header {
-    border-bottom: 1px solid var(--color);
-    padding-block-end: 2em;
-}
-
 h1, h2, h3, h4 {
     line-height: 1em;
 }
@@ -91,7 +91,11 @@ h1 {
     font-size: 3.5em;
     font-weight: 100;
     margin-block: .5em 0;
-    padding-block: .1em .2em;
+    border-bottom: 1px solid var(--color);
+    width: 100vw;
+    padding-block: .15em .7em;
+    padding-inline: 1em;
+    box-sizing: border-box;
 }
 
 h2 {
@@ -120,7 +124,7 @@ a:visited {
     }
 }
 
-#schedule-list {
+#schedule-list--container > ul {
     & li {
         & article {
             margin-block: 2em;
@@ -181,7 +185,11 @@ nav[aria-label="Social Media"] {
     }
 
     main {
-        max-width: 90vw;
+        width: 100vw;
+
+        & > *:not(h1) {
+            max-width: 90vw;
+        }
     }
 
     header {
