@@ -38,7 +38,7 @@ class App {
         const pEl = document.createElement('p');
         timeEl.innerHTML = this.formatDateStr(start, end);
         titleEl.innerText = title;
-        pEl.innerText = description;
+        pEl.innerHTML = description;
         articleEl.appendChild(timeEl);
         articleEl.appendChild(titleEl);
         articleEl.appendChild(pEl);
