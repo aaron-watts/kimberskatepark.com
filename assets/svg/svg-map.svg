@@ -14,16 +14,4 @@
     <symbol id="youtube" viewBox="0 0 32 22.507">
         <path d="M31.68,9.6a6.924,6.924,0,0,0-1.272-3.176A4.577,4.577,0,0,0,27.2,5.07c-4.478-.324-11.2-0.324-11.2-0.324H15.993s-6.717,0-11.2.324A4.577,4.577,0,0,0,1.592,6.426,6.921,6.921,0,0,0,.32,9.6,48.4,48.4,0,0,0,0,14.781v2.428a48.4,48.4,0,0,0,.32,5.179,6.921,6.921,0,0,0,1.272,3.176A5.426,5.426,0,0,0,5.12,26.932C7.68,27.177,16,27.253,16,27.253s6.724-.01,11.2-0.334a4.577,4.577,0,0,0,3.206-1.355,6.923,6.923,0,0,0,1.272-3.176A48.46,48.46,0,0,0,32,17.209V14.781A48.46,48.46,0,0,0,31.68,9.6ZM12.7,20.151l0-8.991,8.647,4.511Z" transform="translate(0 -4.747)" />
     </symbol>
-
-    <symbol id="map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0" />
-    </symbol>
-
-    <radialGradient id="rg" r="150%" cx="30%" cy="107%">
-        <stop stop-color="#fdf497" offset="0" />
-        <stop stop-color="#fdf497" offset="0.05" />
-        <stop stop-color="#fd5949" offset="0.45" />
-        <stop stop-color="#d6249f" offset="0.6" />
-        <stop stop-color="#285AEB" offset="0.9" />
-    </radialGradient> 
 </svg>
