@@ -30,12 +30,6 @@
         --bg-color: var(--black);
         --accent: #ffb300;
     }
-    
-    nav[aria-label="Social Media"] {
-        background: linear-gradient(
-            var(--white), 98%, var(--black)
-        );
-    }
 }
 
 a[href="#content"],
@@ -161,17 +155,12 @@ nav[aria-label="Social Media"] {
         padding-block: 10px;
     }
 
-    & a[aria-label="Facebook"] {
-        fill: #1877f2;
-    }
-    & a[aria-label="Instagram"] {
-        fill: url('/assets/svg/svg-map.svg#rg');
-    }
-    & a[aria-label="X or Twitter"] {
-        fill: var(--black);
-    }
-    & a[aria-label="Youtube"] {
-        fill: #ff0000;
+    & a {
+        fill: var(--accent); 
+
+        & svg:hover {
+            transform: scale(1.1);
+        }
     }
 }
 
